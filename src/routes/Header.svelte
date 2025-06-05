@@ -17,9 +17,6 @@
                        <li aria-current={page.url.pathname === base || page.url.pathname === base + '/' ? 'page' : undefined}>
                                <a href={base || '/'}>Home</a>
                        </li>
-                       <li aria-current={page.url.pathname.startsWith(`${base}/about`) ? 'page' : undefined}>
-                               <a href={`${base}/about`}>About</a>
-                       </li>
                        <li aria-current={page.url.pathname.startsWith(`${base}/screensaver`) ? 'page' : undefined}>
                                <a href={`${base}/screensaver`}>Screensaver</a>
                        </li>
