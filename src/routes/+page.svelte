@@ -2,6 +2,12 @@
   import { onMount } from 'svelte';
 
   class Shape {
+    /**
+     * @param {number} x
+     * @param {number} y
+     * @param {number} size
+     * @param {string} color
+     */
     constructor(x, y, size, color) {
       this.x = x;
       this.y = y;
@@ -46,11 +52,14 @@
   }
 
   class Screensaver {
+    /**
+     * @param {HTMLCanvasElement} canvas
+     */
     constructor(canvas) {
       /** @type {HTMLCanvasElement} */
       this.canvas = canvas;
-      /** @type {CanvasRenderingContext2D} */
-      this.ctx = canvas.getContext('2d');
+      this.ctx = /** @type {CanvasRenderingContext2D} */ (canvas.getContext('2d'));
+      /** @type {Shape[]} */
       this.shapes = [];
       this.resize();
       window.addEventListener('resize', () => this.resize());
@@ -61,6 +70,9 @@
       this.canvas.height = window.innerHeight;
     }
 
+    /**
+     * @param {Shape} shape
+     */
     addShape(shape) {
       this.shapes.push(shape);
     }
@@ -78,7 +90,7 @@
   let saver;
 
   onMount(() => {
-    const canvas = document.getElementById('screensaver');
+    const canvas = /** @type {HTMLCanvasElement} */ (document.getElementById('screensaver'));
     saver = new Screensaver(canvas);
     const theme1 = getComputedStyle(document.documentElement).getPropertyValue('--color-theme-1').trim() || '#ff3e00';
     const theme2 = getComputedStyle(document.documentElement).getPropertyValue('--color-theme-2').trim() || '#4075a6';
