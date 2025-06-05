@@ -42,3 +42,4 @@ You can preview the production build with `npm run preview`.
 This project uses [`@sveltejs/adapter-static`](https://github.com/sveltejs/kit/tree/master/packages/adapter-static) and a GitHub Actions workflow to deploy the built site to **GitHub Pages**. Any changes pushed to the `main` branch automatically trigger a deployment to the `gh-pages` branch.
 
 The application is served from `/octo-presso`, so when developing locally the base path is `/` but in production it uses `/octo-presso`.
+The `svelte.config.js` file now sets this automatically based on `NODE_ENV`, so no manual edits are necessary.
