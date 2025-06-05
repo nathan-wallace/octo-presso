@@ -1,8 +1,9 @@
 <script>
-	import { enhance } from '$app/forms';
-	import { confetti } from '@neoconfetti/svelte';
+       import { enhance } from '$app/forms';
+       import { confetti } from '@neoconfetti/svelte';
 
-	import { MediaQuery } from 'svelte/reactivity';
+       import { MediaQuery } from 'svelte/reactivity';
+       import { base } from '$app/paths';
 
 	/**
 	 * @typedef {Object} Props
@@ -111,7 +112,7 @@
 		};
 	}}
 >
-	<a class="how-to-play" href="/sverdle/how-to-play">How to play</a>
+       <a class="how-to-play" href={`${base}/sverdle/how-to-play`}>How to play</a>
 
 	<div class="grid" class:playing={!won} class:bad-guess={form?.badGuess}>
 		{#each Array.from(Array(6).keys()) as row (row)}

@@ -1,6 +1,8 @@
 import { fail } from '@sveltejs/kit';
 import { Game } from './game';
 
+export const prerender = false;
+
 /** @satisfies {import('./$types').PageServerLoad} */
 export const load = ({ cookies }) => {
 	const game = new Game(cookies.get('sverdle'));
