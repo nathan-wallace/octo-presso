@@ -36,3 +36,9 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Deployment
+
+This project uses [`@sveltejs/adapter-static`](https://github.com/sveltejs/kit/tree/master/packages/adapter-static) and a GitHub Actions workflow to deploy the built site to **GitHub Pages**. The adapter writes the build output to the `docs` directory so that GitHub Pages can serve it directly. Any changes pushed to the `main` branch automatically trigger a deployment to the `gh-pages` branch.
+
+The application is served from `/octo-presso`, so when developing locally the base path is `/` but in production it uses `/octo-presso`. The workflow uploads the `docs` directory as the artifact for GitHub Pages.
