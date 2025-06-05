@@ -1,15 +1,12 @@
 <script>
        import { page } from '$app/state';
        import { base } from '$app/paths';
-       import logo from '$lib/images/svelte-logo.svg';
-       import github from '$lib/images/github.svg';
+      
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://svelte.dev/docs/kit">
-			<img src={logo} alt="SvelteKit" />
-		</a>
+		
 	</div>
 
 	<nav>
@@ -23,20 +20,14 @@
                        <li aria-current={page.url.pathname.startsWith(`${base}/about`) ? 'page' : undefined}>
                                <a href={`${base}/about`}>About</a>
                        </li>
-                       <li aria-current={page.url.pathname.startsWith(`${base}/sverdle`) ? 'page' : undefined}>
-                               <a href={`${base}/sverdle`}>Sverdle</a>
-                       </li>
+                      
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
 	</nav>
 
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
+	
 </header>
 
 <style>
