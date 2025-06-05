@@ -18,6 +18,9 @@
                        <li aria-current={page.url.pathname.startsWith(`${base}/screensaver`) ? 'page' : undefined}>
                                <a href={`${base}/screensaver`}>Screensaver</a>
                        </li>
+                       <li aria-current={page.url.pathname.startsWith(`${base}/game`) ? 'page' : undefined}>
+                               <a href={`${base}/game`}>Game</a>
+                       </li>
                       
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
