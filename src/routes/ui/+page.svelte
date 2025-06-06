@@ -6,17 +6,17 @@
     {
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18M9 3v18m6-18v18M3 21h18" /></svg>`,
       title: 'Responsive Layouts',
-      text: 'Looks stunning on phones, tablets and desktops.'
+      text: 'Adaptable components that look great on any screen.'
     },
     {
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12l-7.5 7.5M10.5 19.5L3 12l7.5-7.5" /></svg>`,
       title: 'Intuitive Controls',
-      text: 'Simple, familiar interface designed for productivity.'
+      text: 'Familiar interactions modeled after industry standards.'
     },
     {
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 6h15m-15 6h15m-15 6h15" /></svg>`,
       title: 'Accessible',
-      text: 'Built with best practices for every user in mind.'
+      text: 'Keyboard friendly and screen reader tested.'
     }
   ];
 </script>
