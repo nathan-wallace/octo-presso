@@ -5,9 +5,9 @@
 
 <section class="py-16 bg-gray-100">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="grid gap-10 md:grid-cols-3">
+    <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
       {#each features as feat}
-        <div class="text-center">
+        <div class="text-center max-w-xs mx-auto">
           <div class="mx-auto mb-4 text-5xl" style="color: var(--color-theme-1)">
             {@html feat.icon}
           </div>
