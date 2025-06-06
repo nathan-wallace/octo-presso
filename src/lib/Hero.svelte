@@ -7,9 +7,9 @@
 </script>
 
 <section class="bg-gray-900 text-white">
-  <div class="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-8">
-    <div class="md:w-1/2 text-center md:text-left">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">{title}</h1>
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col lg:flex-row items-center gap-8">
+    <div class="lg:w-1/2 text-center lg:text-left">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">{title}</h1>
       {#if subtitle}
         <p class="text-xl mb-8 opacity-80">{subtitle}</p>
       {/if}
@@ -20,8 +20,8 @@
       {/if}
     </div>
     {#if image}
-      <div class="md:w-1/2">
-        <img class="rounded-xl shadow-xl w-full" src={image} alt={title} />
+      <div class="lg:w-1/2">
+        <img class="rounded-xl shadow-xl w-full" src={image} alt={title} loading="lazy" />
       </div>
     {/if}
   </div>
