@@ -1,23 +1,27 @@
 <script>
-	import Header from './Header.svelte';
-	import '../app.css';
+       import Header from './Header.svelte';
+       import '../app.css';
 
-	/** @type {{children: import('svelte').Snippet}} */
-	let { children } = $props();
+       /** @type {{children: import('svelte').Snippet, data: any}} */
+       let { children, data } = $props();
 </script>
 
 <div class="app">
-	<Header />
+       {#if !data?.hideChrome}
+               <Header />
+       {/if}
 
-	<main>
-		{@render children()}
-	</main>
+       <main>
+               {@render children()}
+       </main>
 
-	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
-	</footer>
+       {#if !data?.hideChrome}
+               <footer>
+                       <p>
+                               visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
+                       </p>
+               </footer>
+       {/if}
 </div>
 
 <style>
