@@ -1,5 +1,6 @@
 <script>
        import { page } from '$app/state';
+       import { marketingPages } from "$lib/pages.js";
        import { base } from '$app/paths';
       
 </script>
@@ -21,6 +22,11 @@
                        <li aria-current={page.url.pathname.startsWith(`${base}/game`) ? 'page' : undefined}>
                                <a href={`${base}/game`}>Game</a>
                        </li>
+        {#each marketingPages as p}
+                <li aria-current={page.url.pathname.startsWith(`${base}/${p.slug}`) ? "page" : undefined}>
+                        <a href={`${base}/${p.slug}`}>{p.name}</a>
+                </li>
+        {/each}
                       
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
