@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Pricing or Services Overview';
   import Hero from '../Hero.svelte';
   export let data = {
     hero: {

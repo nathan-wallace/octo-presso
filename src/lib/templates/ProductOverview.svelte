@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Product Overview';
   import Hero from '../Hero.svelte';
   import Features from '../Features.svelte';
   export let data = {

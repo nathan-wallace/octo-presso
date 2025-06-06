@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Creative Campaign';
   import Hero from '../Hero.svelte';
   export let data = {
     hero: {

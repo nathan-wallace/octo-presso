@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Case Study';
   import Hero from '../Hero.svelte';
   export let data = {
     hero: {
