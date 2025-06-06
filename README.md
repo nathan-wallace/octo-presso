@@ -60,6 +60,10 @@ The script creates `src/routes/<slug>/+page.svelte` that renders the selected te
 
 Run `node scripts/create-page.js --list` to view all available template IDs.
 
+The `customizable-demo` template showcases a more interactive experience where
+users can adjust colors and sizes directly on the page. It's great for content
+demos that need live customization controls.
+
 ## Resetting the Project
 
 Run `npm run reset` to reinstall dependencies, remove build artifacts (including `node_modules`, `.svelte-kit` and the generated `docs` directory) and rebuild the application from a clean slate. This command invokes `scripts/reset-project.js` under the hood and also runs `npm run check` to verify the project.
