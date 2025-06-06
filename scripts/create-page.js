@@ -1,12 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const [slug, template] = process.argv.slice(2);
-
-if (!slug || !template) {
-  console.error('Usage: node scripts/create-page.js <slug> <template-id>');
-  process.exit(1);
-}
+const args = process.argv.slice(2);
 
 const templatesDir = path.resolve('src/lib/templates');
 const files = await fs.readdir(templatesDir);
@@ -21,12 +16,47 @@ for (const file of files) {
   }
 }
 
+function startCase(str) {
+  return str
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
+if (args.includes('--list') || args.includes('-l')) {
+  console.log('Available templates:');
+  for (const [id] of Object.entries(idToFile)) {
+    console.log(`- ${id}\t${startCase(id)}`);
+  }
+  process.exit(0);
+}
+
+const [slug, template] = args;
+
+if (!slug || !template) {
+  console.error('Usage: node scripts/create-page.js <slug> <template-id>');
+  console.error('       node scripts/create-page.js --list');
+  process.exit(1);
+}
+
 if (!idToFile[template]) {
-  console.error(`Template "${template}" not found. Available: ${Object.keys(idToFile).join(', ')}`);
+  console.error(`Template "${template}" not found.`);
+  console.log('Available templates:');
+  for (const id of Object.keys(idToFile)) {
+    console.log(`- ${id}`);
+  }
   process.exit(1);
 }
 
 const routeDir = path.resolve('src/routes', slug);
+try {
+  await fs.access(routeDir);
+  console.error(`Route ${slug} already exists at src/routes/${slug}`);
+  process.exit(1);
+} catch {
+  // directory does not exist, proceed
+}
+
 await fs.mkdir(routeDir, { recursive: true });
 const componentFile = idToFile[template];
 const content = `<script>
