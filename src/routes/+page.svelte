@@ -46,7 +46,7 @@
       ctx.beginPath();
       ctx.rect(this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
       ctx.strokeStyle = this.color;
-      ctx.lineWidth = 4;
+      ctx.lineWidth = 8;
       ctx.stroke();
     }
   }
