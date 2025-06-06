@@ -1,13 +1,9 @@
 # About
 
-Welcome to our marketing site built with SvelteKit.
+This sample site uses Markdown content alongside Svelte components. Here are a few example pages you might build:
 
-This example demonstrates how Markdown content can be mixed with Svelte
-components to produce rich pages. You can use the `scripts/create-page.js`
-helper to scaffold new routes from any of the templates under
-`src/lib/templates` and then enhance them with your own Markdown or
-components.
+- **Tree Explorer** – showcase your favorite forests and visualize how trees change through the seasons.
+- **Monkey Sanctuary** – highlight primate conservation efforts with playful images and adoption stories.
+- **Tibetan Buddhism Journey** – feature temple events and share teachings from Tibetan monks.
 
-The goal is to give you a solid starting point while keeping the code
-easy to understand. Explore the existing templates and feel free to
-experiment by creating your own.
+Modify these examples or create new ones to suit your own ideas.
