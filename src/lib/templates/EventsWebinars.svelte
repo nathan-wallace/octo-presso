@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Events and Webinars';
   import Hero from '../Hero.svelte';
   export let data = {
     hero: {

@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Download/Resource Center';
   import Hero from '../Hero.svelte';
   export let data = {
     hero: {

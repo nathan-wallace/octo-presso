@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Blog/News Section';
   import Hero from '../Hero.svelte';
   export let data = {
     hero: {

@@ -37,6 +37,23 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
+## Page Templates
+
+This project includes several ready-made page templates in `src/lib/templates`.
+You can scaffold a new route from one of these templates using the helper script:
+
+```bash
+node scripts/create-page.js <slug> <template-id>
+```
+
+For example, to create a `/pricing` page based on the `pricing` template:
+
+```bash
+node scripts/create-page.js pricing pricing
+```
+
+The script creates `src/routes/<slug>/+page.svelte` that renders the selected template component.
+
 ## Deployment
 
 This project uses [`@sveltejs/adapter-static`](https://github.com/sveltejs/kit/tree/master/packages/adapter-static) and a GitHub Actions workflow to deploy the built site to **GitHub Pages**. Any changes pushed to the `main` branch automatically trigger a deployment to the `gh-pages` branch.

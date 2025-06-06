@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Component Library Showcase';
   import Hero from '../Hero.svelte';
   import Features from '../Features.svelte';
   export let data = {

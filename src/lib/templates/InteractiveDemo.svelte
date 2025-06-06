@@ -1,4 +1,5 @@
 <script>
+  export const displayName = 'Interactive Demo';
   import Hero from '../Hero.svelte';
   import { onMount } from 'svelte';
   /** @type {HTMLCanvasElement} */
