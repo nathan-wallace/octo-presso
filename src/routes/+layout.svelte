@@ -1,13 +1,14 @@
 <script>
-       import Header from './Header.svelte';
-       import '../app.css';
+import Header from './Header.svelte';
+import { page } from '$app/stores';
+import '../app.css';
 
-       /** @type {{children: import('svelte').Snippet, data: any}} */
-       let { children, data } = $props();
+/** @type {{children: import('svelte').Snippet}} */
+let { children } = $props();
 </script>
 
 <div class="app">
-       {#if !data?.hideChrome}
+       {#if !$page.data.hideChrome}
                <Header />
        {/if}
 
@@ -15,7 +16,7 @@
                {@render children()}
        </main>
 
-       {#if !data?.hideChrome}
+       {#if !$page.data.hideChrome}
                <footer>
                        <p>
                                visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
