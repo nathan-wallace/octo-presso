@@ -1,4 +1,5 @@
 <script>
+  /** @type {{icon: string, title: string, text: string}[]} */
   export let features = [];
 </script>
 

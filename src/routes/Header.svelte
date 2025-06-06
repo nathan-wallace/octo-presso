@@ -19,9 +19,6 @@
                        <li aria-current={page.url.pathname.startsWith(`${base}/screensaver`) ? 'page' : undefined}>
                                <a href={`${base}/screensaver`}>Screensaver</a>
                        </li>
-                       <li aria-current={page.url.pathname.startsWith(`${base}/game`) ? 'page' : undefined}>
-                               <a href={`${base}/game`}>Game</a>
-                       </li>
         {#each marketingPages as p}
                 <li aria-current={page.url.pathname.startsWith(`${base}/${p.slug}`) ? "page" : undefined}>
                         <a href={`${base}/${p.slug}`}>{p.name}</a>
