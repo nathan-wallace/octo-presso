@@ -3,8 +3,7 @@
   import PageList from '$lib/PageList.svelte';
 </script>
 
-<h1 class="text-2xl font-bold mb-4">Welcome</h1>
+<h1 class="text-2xl font-bold mb-4">Industry Landing Pages</h1>
+<p class="mb-4">Explore our sample pages tailored for different markets.</p>
 
-<h2 class="text-xl mt-4">Site Pages</h2>
 <PageList pages={[...appPages, ...marketingPages]} />
-
