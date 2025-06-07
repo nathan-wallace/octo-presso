@@ -2,10 +2,6 @@
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## About WebFirst
-
-This example project is maintained by **WebFirst, Inc.**, a leader in federal contracting for software development and strategy. WebFirst delivers dependable, high-quality web solutions for agencies across the U.S. government, and this starter kit reflects that commitment to excellence.
-
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
@@ -63,17 +59,6 @@ Run `node scripts/create-page.js --list` to view all available template IDs.
 The `customizable-demo` template showcases a more interactive experience where
 users can adjust colors and sizes directly on the page. It's great for content
 demos that need live customization controls.
-
-## AI-Driven Creative Engagement
-
-Creative design comes alive when paired with insight from AI. Combine templates
-like `AiLanding` and `CreativeCampaign` to build dynamic pages that adapt to
-your audience. These components help you launch experiences that grab attention
-and encourage deeper interaction.
-
-## Resetting the Project
-
-Run `npm run reset` to reinstall dependencies, remove build artifacts (including `node_modules`, `.svelte-kit` and the generated `docs` directory) and rebuild the application from a clean slate. This command invokes `scripts/reset-project.js` under the hood and also runs `npm run check` to verify the project.
 
 ## Deployment
 
